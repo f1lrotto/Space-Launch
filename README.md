@@ -153,6 +153,11 @@ Launch will be set as `upcoming` to false and `success` to false.
     }
 ```
 ### Technologies used
+Backend of this API runns on **Node.js** with **express**.
+
+This API stores the data in a **MongoDB** database, which is hosted on **Atlas**, and is interacted with by **Mongoose**.
+
+To make requests to the **SpaceX API**, it's using axios, and to parse the csv file with planets from nasa, it uses **csv-parse**.
 
 ## Running the project
 
