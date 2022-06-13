@@ -1,16 +1,17 @@
 # Space-Launch-API
 
 ## Introduction
-This is a Space launch API that can be used to get information about upcoming launches from SpaceX and even add and manage your own launches. It makes use of the SpaceX API to get the information about their upcoming launches.
+This is a **Space launch API** that can be used to get information about upcoming launches from **SpaceX** and even add and **manage your own launches**. It makes use of the **SpaceX API** to get the information about their upcoming launches.
 
-For your own launches, you can schedule your missions to different habitable planets inside our splanet system. These planets were filtered from data by NASA about the discovered planets in our solar system. 
+For your own launches, you can **schedule your missions** to different habitable planets inside our splanet system. These planets were filtered from data by **NASA** about the discovered planets in our solar system. 
 
 They were filtred on basis of the following criteria:
 - koi_disposition === "CONFIRMED" 
 - koi_insol > 0.36 
 - koi_insol < 1.11 
 - koi_prad < 1.6
-  
+
+(koi == Kepler Object of Interest)
 ## Usage
 This API has 4 endpoints:
 
