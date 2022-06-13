@@ -24,5 +24,5 @@ app.listen(process.env.PORT, async () => {
   await connectMongo();
   await loadPlanetsData();
   await loadLaunchData();
-  console.log(`Server listening on port ${PORT}`);
+  console.log(`Server listening on port ${process.env.PORT}`);
 });
