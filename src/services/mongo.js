@@ -7,8 +7,7 @@ const MONGO_URL = process.env.MONGO_URL;
 async function connectMongo() {
   try {
     await mongoose.connect(MONGO_URL);
-    console.log("Database connected to:");
-    console.log(MONGO_URI)
+    console.log("Database connected");
   } catch (err) {
     throw err
   }
