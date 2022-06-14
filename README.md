@@ -19,7 +19,7 @@ This API has 4 endpoints:
 #### GET planets
 Make `GET` request to `http://localhost:8000/planets` to get a list of all the habitable planets in our solar system.
 ##### Response:
-```
+```json
 [
     {
         "keplerName": "Kepler-1652 b",
@@ -34,7 +34,7 @@ Make `GET` request to `http://localhost:8000/planets` to get a list of all the h
 #### GET launches
 Make `GET` request to `http://localhost:8000/launches/` to get the list of all launches.
 ##### Response:
-```
+```json
 [
     {
         "flightNumber": 1,
@@ -75,7 +75,7 @@ Make `GET` request to `http://localhost:8000/launches/` to get the list of all l
 #### GET launches paginated
 Make `GET` request to `http://localhost:8000/launches?limit=10&page=18` to get the list of launches paginated. You need to pass limit and page as parameters.
 ##### Response:
-```
+```json
 [
     {
         "flightNumber": 180,
@@ -104,7 +104,7 @@ Make `GET` request to `http://localhost:8000/launches?limit=10&page=18` to get t
 ```
 #### POST launch
 Make `POST` request to `http://localhost:8000/launches/` to add a new launch. You need to pass the following parameters:
-```
+```json
 {
   "mission": "example mission",
   "rocket": "example rocket",
@@ -113,7 +113,7 @@ Make `POST` request to `http://localhost:8000/launches/` to add a new launch. Yo
 }
 ```
 ##### Response:
-```
+```json
 {
     "mission": "example mission",
     "rocket": "example rocket",
@@ -128,7 +128,7 @@ Make `POST` request to `http://localhost:8000/launches/` to add a new launch. Yo
 #### DELETE launch
 Make `DELETE` request to `http://localhost:8000/launches/ID` to delete a launch. You need to pass the ID of the launch as a parameter.
 ##### Response:
-```
+```json
 {
     "acknowledged": true,
     "modifiedCount": 1,
@@ -139,7 +139,7 @@ Make `DELETE` request to `http://localhost:8000/launches/ID` to delete a launch.
 ```
 Launch will be set as `upcoming` to false and `success` to false.
 ##### This is how the launch looks after deletion:
-```
+```json
     {
         "flightNumber": 195,
         "customers": [
@@ -163,7 +163,7 @@ To make requests to the **SpaceX API**, it's using axios, and to parse the csv f
 ## Running the project
 
 ### Install the dependancies
-```
+```bash
 npm install
 ``` 
 ### Creating .env file
@@ -174,10 +174,10 @@ In this file you should include:
 - `MONGO_URI` - a connect URI to your mongoDB database
   
 ### Start the application 
-```
+```bash
 npm start
 ```
 ### Start the application in development mode (hot-code reloading)
-```
+```bash
 npm run dev
 ```
