@@ -1,5 +1,8 @@
 # Space-Launch-API
+## Check out the api
+This api is hosted on [https://space-launch-api-f1lrotto.herokuapp.com](https://space-launch-api-f1lrotto.herokuapp.com). 
 
+Please check the documentation bellow for more information. 
 ## Introduction
 This is a **Space launch API** that can be used to get information about upcoming launches from **SpaceX** and even add and **manage your own launches**. It makes use of the **SpaceX API** to get the information about their upcoming launches.
 
@@ -17,7 +20,7 @@ This API has 4 endpoints:
 
 (these examples were shortened to make them more readable)
 #### GET planets
-Make `GET` request to `http://localhost:8000/planets` to get a list of all the habitable planets in our solar system.
+Make `GET` request to `https://space-launch-api-f1lrotto.herokuapp.com/planets` to get a list of all the habitable planets in our solar system.
 ##### Response:
 ```json
 [
@@ -32,7 +35,7 @@ Make `GET` request to `http://localhost:8000/planets` to get a list of all the h
 ]
 ```
 #### GET launches
-Make `GET` request to `http://localhost:8000/launches/` to get the list of all launches.
+Make `GET` request to `https://space-launch-api-f1lrotto.herokuapp.com/launches/` to get the list of all launches.
 ##### Response:
 ```json
 [
@@ -73,7 +76,7 @@ Make `GET` request to `http://localhost:8000/launches/` to get the list of all l
 ]
 ```
 #### GET launches paginated
-Make `GET` request to `http://localhost:8000/launches?limit=10&page=18` to get the list of launches paginated. You need to pass limit and page as parameters.
+Make `GET` request to `https://space-launch-api-f1lrotto.herokuapp.com/launches?limit=10&page=18` to get the list of launches paginated. You need to pass limit and page as parameters.
 ##### Response:
 ```json
 [
@@ -103,7 +106,7 @@ Make `GET` request to `http://localhost:8000/launches?limit=10&page=18` to get t
 ]
 ```
 #### POST launch
-Make `POST` request to `http://localhost:8000/launches/` to add a new launch. You need to pass the following parameters:
+Make `POST` request to `https://space-launch-api-f1lrotto.herokuapp.com/launches/` to add a new launch. You need to pass the following parameters:
 ```json
 {
   "mission": "example mission",
@@ -126,7 +129,7 @@ Make `POST` request to `http://localhost:8000/launches/` to add a new launch. Yo
 }
 ```
 #### DELETE launch
-Make `DELETE` request to `http://localhost:8000/launches/ID` to delete a launch. You need to pass the ID of the launch as a parameter.
+Make `DELETE` request to `https://space-launch-api-f1lrotto.herokuapp.com/launches/ID` to delete a launch. You need to pass the ID of the launch as a parameter.
 ##### Response:
 ```json
 {
@@ -171,7 +174,7 @@ You need to create a `.env` file in the `/src` directory
 
 In this file you should include:
 - `PORT` - on which the application will run on
-- `MONGO_URI` - a connect URI to your mongoDB database
+- `MONGO_URL` - a connect URI to your mongoDB database
   
 ### Start the application 
 ```bash
