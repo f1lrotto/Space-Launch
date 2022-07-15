@@ -1,5 +1,4 @@
 const express = require("express");
-const cors = require("cors");
 
 const api = require("./routes/api");
 const { loadPlanetsData } = require("./models/planets.model");
@@ -10,11 +9,6 @@ const app = express();
 
 require("dotenv").config();
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-  })
-);
 
 app.use(express.json());
 
